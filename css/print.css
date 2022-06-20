@@ -1,0 +1,13 @@
+
+:root{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+
+.no-print, body > nav, body > main footer, form{
+    display: none;
+}

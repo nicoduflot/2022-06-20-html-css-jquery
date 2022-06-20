@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formation HTML5 / CSS3, RWD, JS, Ajax et jQuery - introduction</title>
     <!-- Ici se trouvera l'appel des fichiers de type css et l'écriture js ou l'appel de script js -->
+    <!-- appeler notre fichier de style CSS pour l'affichage écran -->
+    <link rel="stylesheet" href="./css/style.css" media="screen" />
+    <link rel="stylesheet" href="./css/print.css" media="print" />
 </head>
 <body>
     <header>
@@ -262,7 +265,7 @@ facilis alias fugit dolor omnis vitae amet?
                         Si action n'est pas précisé, le formulaire considère que c'est la page où il
                         se trouve qui sera la page de traitement.
                     </p>
-                    <h4>Notre formulaire</h4>
+                    <h4 class="no-print">Notre formulaire</h4>
                     <form method="get" action="./test/test.html">
                         <fieldset aria-describedby="titre-fieldset-coordonees">
                             <legend id="titre-fieldset-coordonees">
@@ -359,7 +362,9 @@ facilis alias fugit dolor omnis vitae amet?
         </section>
     </main>
     <footer>
-
+        <aside>
+            &copy;Dawan Juin 2022
+        </aside>
     </footer>
 </body>
 </html>
