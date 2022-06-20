@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formation HTML5 / CSS3, RWD, JS, Ajax et jQuery - introduction</title>
     <!-- Ici se trouvera l'appel des fichiers de type css et l'écriture js ou l'appel de script js -->
 </head>
@@ -26,6 +26,60 @@
                 <header>
                     <h2>Introduction</h2>
                 </header>
+                <main>
+                    <h3>Balises générales de contenu</h3>
+                    <p>
+                        Généralement, tout les contenus de type texte sont a mettre dans des balise de type paragraphe.
+                        Il n'y a pas que la balise <code>&lt;p&gt; &lt;/p&gt;</code>
+                    </p>
+                    <p>
+                        Il y a deux type de balises qui contiennent du texte, celles avec un "display block" d'autres "inline".
+                    </p>
+                    <ul>
+                        <li>
+                            Block : <br />la balise prend tout l'espace en largeur, et ne peut pas contenir d'autre balise de texte de type block, sauf contre-indication en CSS.<br />
+                            En revanche, elle peut contenir des balise de texte de type inline
+                        </li>
+                        <li>
+                            Inline :  <br />ces balises entourent le texte, sans générer de marge, d'espace, sauf contre-indication en CSS.
+                        </li>
+                    </ul>
+                    <p>
+                        Au niveau des balises block :
+                    </p>
+                    <blockquote>
+                        <q><cite>Alea jacta est</cite></q><br />
+                        Jules César
+                    </blockquote>
+                    <pre>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+Reprehenderit quo magni maxime quam quis officiis, fugit 
+voluptatem? Voluptate, eaque fuga magni accusantium soluta 
+facilis alias fugit dolor omnis vitae amet?
+                    </pre>
+                    <h3>Balises sur le texte</h3>
+                    <p>
+                        Il existe des balise inline pour modifier l'apparence du texte.
+                    </p>
+                    <p>
+                        Par exemple, pour mettre simplement en <b>gras</b>, on utilise la balise &lt;b&gt;, mais si le texte mis en gras a une importance sur la pertinence du contenu niveau SEO, on <strong>utilisera la balise &lt;strong&gt;</strong>.<br />
+                        Il existe le même comportement pour <i>l'italique</i> : la balise &lt;i&gt; pour simplement l'afficher visuellement,
+                        la <em>balise &lt;em&gt;</em>, qui elle ajoute de l'emphase sur le contenu.
+                    </p>
+                    <p>
+                        Autrefois, pour changer la couleur, la police d'un morceau de texte, 
+                        on utilisait <font color="#f00" face="arial" size="1">font</font>, maintenant, on va 
+                        plutôt utiliser une balise générale inline 
+                        <span style="color: red;font-size: 1.2em;font-family: Arial, Helvetica, sans-serif;">&lt;span&gt;</span>.
+                    </p>
+                </main>
+                <footer>
+                    <a href="./article.html" title="Lien vers l'article">
+                        <button>
+                            Lire l'article
+                        </button>
+                    </a>
+                </footer>
             </article>
             <aside>
 
