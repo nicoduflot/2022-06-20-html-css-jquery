@@ -160,6 +160,78 @@ facilis alias fugit dolor omnis vitae amet?
                             <td>&nbsp;&nbsp;&nbsp;</td>
                         </tr>
                     </table>
+                    <h3>Intégrer des images sur une page web</h3>
+                    <p>
+                        Par défaut, la balise <code>&lt;img&gt;</code> est utilisée, elle a besoin d'attributs pour aller chercher et afficher l'image.<br />
+                        <code>&lt;img src="./images/image.png" /&gt;</code><br />
+                        src = la source de l'image.<br />
+                        Pour être dans les normes du W3C (world Wide Web Consortium, les garant des bonnes pratiques HTML), il faut ajouter l'attribut alt, qui défini un texte alternatif au cas ou l'image serait "cassée", le texte s'affichera en lieu et place de l'image<br />
+                        <code>&lt;img src="./images/image.png" alt="une image exemple" /&gt;</code><br />
+                        <img src="./images/image.png" alt="une image exemple" />
+                    </p>
+                    <img src="./images/skeletor-poster-masters-of-the-universe.jpg" alt="Skeletor par James White" />
+                    <p>
+                        Avec HTML5, une balise sémantique est maintenant utilisée pour contenir les balises img, et permet aussi d'associé à cette image une légende qui sera reconnue comme légende de l'image par le SEO
+                    </p>
+                    <figure>
+                        <img src="./images/batman-d-apres-bruce-timm-2oaz.jpg" alt="Batman dessiné par Bruce Timm" />
+                        <figcaption>
+                            Batman dessiné par Bruce Timm
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ducimus a tenetur molestiae praesentium sequi perferendis dolorum iusto pariatur itaque alias quod cumque, velit assumenda cupiditate animi incidunt eligendi consequatur.
+                        </figcaption>
+                    </figure>
+                    <p>
+                        une image peut aussi servir de support à un lien. 
+                        <a href="./test/test.html" title="image lien vers test.html">
+                            <img src="./images/favicon-32x32.png" alt="image lien vers test.html" />
+                        </a>
+                    </p>
+                    <h3>Inclure des media vidéo et audio hébergés par le site</h3>
+                    <p>
+                        Les media vidéo et audio s'affichent par le biais de la balise <code>&lt;video&gt;</code> pour les video, 
+                        et <code>&lt;audio&gt;</code> pour l'audio
+                    </p>
+                    <h4>la balise video</h4>
+                    <p>
+                        deux façons de l'utiliser
+                    </p>
+                    <figure>
+                        <video src="./media/Fallout-4-Launch-Trailer.mp4" poster="./images/cropped-wallhaven-fallout-4-01-3-1536x922.jpg" 
+                    type="video/mp4" controls preload="auto" muted></video>
+                        <figcaption>
+                            Vidéo du trailler de la sortie de Fallout 4
+                        </figcaption>
+                    </figure>
+                    <p>
+                        Ici, la source de la vidéo est directement appelée dans les attributs de la balise video, mais 
+                        certains formats ne sont supportés par tous les navigateurs.
+                    </p>
+                    <p>
+                        Si on héberge des vidéos et qu'on veut proposer des formats adaptés aux navigateur et bande passante du visiteur,
+                        il faut préciser plusieurs source de la même vidéo, entre <code>&lt;video&gt;</code> et <code>&lt;/video&gt;</code>.
+                        Le navigateur fera le choix de la source la plus adaptée.
+                    </p>
+                    <figure>
+                        <video controls preload="auto">
+                            <source src="./media/Big_Buck_Bunny_360_10s_1MB.webm" type="video/webm" />
+                            <source src="./media/Big_Buck_Bunny_360_10s_1MB.mp4" type="video/mp4" />
+                        </video>
+                        <figcaption>
+                            Extrait de la vidéo Big Buck Bunny
+                        </figcaption>
+                    </figure>
+                    <h4>La balise audio</h4>
+                    <figure>
+                        <img src="./images/diablo_02.jpg" />
+                        <figcaption>
+                            <audio controls preload="auto">
+                                <source src="./media/diablo_town.mp3" type="audio/mp3" />
+                            </audio>
+                        </figcaption>
+                        <figcaption>
+                            Musique d'ambiance de la ville de Tristram dans le premier Diablo
+                        </figcaption>
+                    </figure>
                 </main>
                 <footer>
                     <a href="./article.html" title="Lien vers l'article">
