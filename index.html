@@ -72,6 +72,94 @@ facilis alias fugit dolor omnis vitae amet?
                         plutôt utiliser une balise générale inline 
                         <span style="color: red;font-size: 1.2em;font-family: Arial, Helvetica, sans-serif;">&lt;span&gt;</span>.
                     </p>
+                    <h3>Les tableaux en html</h3>
+                    <table border="1">
+                        <caption>Tableau des jeux cools pour exemple</caption>
+                        <thead>
+                            <tr>
+                                <th>N° du classement</th>
+                                <th>Nom du jeu</th>
+                                <th>Editeur</th>
+                                <th>Développeur</th>
+                                <th>Année de sortie</th>
+                                <th>Prix de sortie</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>1</th>
+                                <td>Duke Nukem 3d</td>
+                                <td>Apogee Software</td>
+                                <td>3d Realms</td>
+                                <td>1996</td>
+                                <td>250 fr</td>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <td>Shadow Warrior</td>
+                                <td>Apogee Software</td>
+                                <td>3d Realms</td>
+                                <td>1997</td>
+                                <td>250 fr</td>
+                            </tr>
+                            <tr>
+                                <th>3</th>
+                                <td>Carmageddon</td>
+                                <td>Interplay</td>
+                                <td>Stainless Games</td>
+                                <td>1997</td>
+                                <td>200 fr</td>
+                            </tr>
+                            <tr>
+                                <th>4</th>
+                                <td>Carmageddon II</td>
+                                <td>Sales Curve Interactive</td>
+                                <td>Stainless Games</td>
+                                <td>1998</td>
+                                <td>250 fr</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>N° du classement</th>
+                                <th>Nom du jeu</th>
+                                <th>Editeur</th>
+                                <th>Développeur</th>
+                                <th>Année de sortie</th>
+                                <th>Prix de sortie</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <h3>Les "fusions" de cellues des tableaux en HTML</h3>
+                    <table border="1">
+                        <tr>
+                            <td colspan="3">cellule 1 en colspan=3</td>
+                            <td>Cellule 2</td>
+                            <td>Cellule 3</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3">cellule 1 en rowspan=3</td>
+                            <td>&nbsp;&nbsp;&nbsp;</td>
+                            <td colspan="3" rowspan="3">
+                                Cellule 3<br />
+                                Colspan=3<br />
+                                Rowspan=3
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Cellule 1</td>
+                        </tr>
+                        <tr>
+                            <td>Cellule 1</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;&nbsp;&nbsp;</td>
+                            <td>&nbsp;&nbsp;&nbsp;</td>
+                            <td>&nbsp;&nbsp;&nbsp;</td>
+                            <td>&nbsp;&nbsp;&nbsp;</td>
+                            <td>&nbsp;&nbsp;&nbsp;</td>
+                        </tr>
+                    </table>
                 </main>
                 <footer>
                     <a href="./article.html" title="Lien vers l'article">
