@@ -55,10 +55,14 @@
                         Jules César
                     </blockquote>
                     <pre>
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-Reprehenderit quo magni maxime quam quis officiis, fugit 
-voluptatem? Voluptate, eaque fuga magni accusantium soluta 
-facilis alias fugit dolor omnis vitae amet?
+Lorem ipsum dolor sit amet, 
+consectetur adipisicing elit. 
+Reprehenderit quo magni maxime 
+quam quis officiis, fugit 
+voluptatem? Voluptate, eaque fuga 
+magni accusantium soluta 
+facilis alias fugit dolor omnis 
+vitae amet?
                     </pre>
                     <h3>Balises sur le texte</h3>
                     <p>
@@ -75,7 +79,13 @@ facilis alias fugit dolor omnis vitae amet?
                         plutôt utiliser une balise générale inline 
                         <span style="color: red;font-size: 1.2em;font-family: Arial, Helvetica, sans-serif;">&lt;span&gt;</span>.
                     </p>
-                    <h3>Les tableaux en html</h3>
+                </main>
+            </article>
+            <article>
+                <header>
+                    <h2>Les tableaux en html</h2>
+                </header>
+                <main>
                     <table border="1">
                         <caption>Tableau des jeux cools pour exemple</caption>
                         <thead>
@@ -163,7 +173,13 @@ facilis alias fugit dolor omnis vitae amet?
                             <td>&nbsp;&nbsp;&nbsp;</td>
                         </tr>
                     </table>
-                    <h3>Intégrer des images sur une page web</h3>
+                </main>
+            </article>
+            <article>
+                <header>
+                    <h2>Intégrer des images sur une page web</h2>
+                </header>
+                <main>
                     <p>
                         Par défaut, la balise <code>&lt;img&gt;</code> est utilisée, elle a besoin d'attributs pour aller chercher et afficher l'image.<br />
                         <code>&lt;img src="./images/image.png" /&gt;</code><br />
@@ -193,7 +209,13 @@ facilis alias fugit dolor omnis vitae amet?
                             <img src="./images/favicon-32x32.png" alt="image lien vers test.html" />
                         </a>
                     </p>
-                    <h3>Inclure des media vidéo et audio hébergés par le site</h3>
+                </main>
+            </article>
+            <article>
+                <header>
+                    <h2>Inclure des media vidéo et audio hébergés par le site</h2>
+                </header>
+                <main>
                     <p>
                         Les media vidéo et audio s'affichent par le biais de la balise <code>&lt;video&gt;</code> pour les video, 
                         et <code>&lt;audio&gt;</code> pour l'audio
@@ -239,7 +261,13 @@ facilis alias fugit dolor omnis vitae amet?
                             Musique d'ambiance de la ville de Tristram dans le premier Diablo
                         </figcaption>
                     </figure>
+                </main>
+            </article>
+            <article>
+                <header>
                     <h3>Inclure des media vidéo et audio hébergés par des sites tiers</h3>
+                </header>
+                <main>
                     <p>
                         Youtube, dailymotion, etc propose de partager leur contenu vidéo via des cadres intégrés (iframe) dont ils fournissent le code HTML dans leurs boutons de partage.
                     </p>
@@ -248,8 +276,8 @@ facilis alias fugit dolor omnis vitae amet?
                         <iframe class="iframeVideo" src="https://www.youtube.com/embed/1H5g4Mh-G6I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </figure>
                     <h4>Partagé par dailymotion</h4>
-                    <figure class="iframeVideo" style="">
-                        <iframe class="iframeVideo" style="" frameborder="0" type="text/html" src="https://www.dailymotion.com/embed/video/x1nofw" width="100%" height="100%" allowfullscreen ></iframe>
+                    <figure class="iframeVideo">
+                        <iframe class="iframeVideo" frameborder="0" type="text/html" src="https://www.dailymotion.com/embed/video/x1nofw" width="100%" height="100%" allowfullscreen ></iframe>
                     </figure>
                     <h3>Les iframes</h3>
                     <p>
@@ -276,7 +304,13 @@ facilis alias fugit dolor omnis vitae amet?
                     <p>
                         Pour pouvoir afficher cette autre page, il faut que le serveur hébergeur de la page autorise l'affichage via iframe
                     </p>
+                </main>
+            </article>
+            <article>
+                <header>
                     <h3>Les formulaires HTML</h3>
+                </header>
+                <main>
                     <p>
                         Les formulaires servent a récupérer des informations pour traitement, par exemple,
                         un serveur php qui pourra les enregistrer en fichier, en bdd, ou les envoyer par mail
@@ -388,6 +422,33 @@ facilis alias fugit dolor omnis vitae amet?
                             Envoyer
                         </button>
                     </form>
+                </main>
+            </article>
+            <article>
+                <header>
+                    <h3>em et rem</h3>
+                </header>
+                <main>
+                    <p>
+                        em      =>  cadratin : unité de mesure en print sur les presses<br />
+                        le cadratin se calcul par rapport à son parent<br />
+                        rem     =>  cadratin racine : se calcul par rapport à la taille racine de police
+                    </p>
+                    <div class="deuxEm">
+                        ET <span class="deuxEm">ET</span>
+                    </div>
+                    <div class="deuxRem">
+                        ET <span class="deuxRem">ET</span>
+                    </div>
+                    <h3>vw & vh</h3>
+                    <p>
+                        vw & vh =>  viewport width & viewport height : correspond à la taille <br />
+                        d'affichage de la page en largeur et en hauteur
+                        si affichage en largeur 768px alors 20vw = 153.6 px
+                    </p>
+                    <div style="border: 1px solid #000; width:20vw">
+                        Test
+                    </div>
                 </main>
                 <footer>
                     <a href="./article.html" title="Lien vers l'article">

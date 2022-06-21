@@ -1,10 +1,39 @@
 
+/*
+dimension les plus vues en web :
+px      =>  Pixel
+em      =>  cadratin : unité de mesure en print sur les presses
+            le cadratin se calcul par rapport à son parent
+rem     =>  cadratin racine : se calcul par rapport à la taille racine de police
+%       =>  pourcentage, se calcule par rapport à l'élément qui le contient
+vw & vh =>  viewport width & viewport height : correspond à la taille 
+            d'affichage de la page en largeur et en hauteur
+            si affichage en largeur 768px alors 20vw = 153.6 px
+
+si 2em = 32 px, 1em = 16px
+
+*/
+
 :root{
     font-family: Arial, Helvetica, sans-serif;
+    /* le :root permet de créer des variables qui appelable par les règles css avec var()*/
+    --couleur-texte-generale: rgb(34, 33, 38);
+    --bg-header: var(--couleur-texte-generale);
+    --header-text-color: #f2c438;
 }
 
 *, *::before, *::after{
     box-sizing: border-box;
+}
+
+/* classes et classes appliquées à des éléménts */
+
+.deuxEm{
+    font-size: 2em;
+}
+
+.deuxRem{
+    font-size: 2rem;
 }
 
 figure.iframeVideo{
@@ -22,6 +51,8 @@ iframe.iframeVideo{
     overflow:hidden;
 }
 
+/* règles appliquées à des éléments */
+
 img{
     max-width: 200px;
 }
@@ -30,3 +61,50 @@ video{
     max-width: 100%;
 }
 
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+/* règles appliquées aux éléments dans l'architecture */
+
+body{
+    color: var(--couleur-texte-generale);
+    margin: 0;
+}
+
+body > header h1{
+    margin: 0;
+}
+
+body > header,
+body > nav{
+    color: var(--header-text-color);
+    background-color: var(--bg-header);
+    padding: 5px 20px;
+}
+
+body > nav > ul{
+    line-height: 1.5rem;
+}
+
+body > nav > ul > li a, 
+body > nav > ul > li a:visited{
+    color: var(--header-text-color);
+    text-decoration: none;
+    display: block;
+    padding-left: 10px;
+}
+
+body > nav > ul > li a:hover,
+body > nav > ul > li a:focus,
+body > nav > ul > li a:focus-visible{
+    color: var(--bg-header);
+    background-color: var(--header-text-color);
+}
+
+body > main{
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
