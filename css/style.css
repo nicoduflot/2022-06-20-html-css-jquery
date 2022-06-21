@@ -1,5 +1,6 @@
 
 @import url('./JMHArkham.css');
+@import url('./bootstrap-icons.css');
 
 /*
 dimension les plus vues en web :
@@ -40,6 +41,21 @@ si 2em = 32 px, 1em = 16px
 
 .deuxRem{
     font-size: 2rem;
+}
+
+.form-help::before{
+  font-family: bootstrap-icons !important;
+  content: "\f430";
+}
+
+.form-help{
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    border: 1px solid var(--article-button-bg);
+    padding: 5px;
+    background-color: var(--header-text-color);
+    border-radius: 5px;
 }
 
 figure.iframeVideo{
@@ -94,6 +110,17 @@ blockquote{
     padding: 10px;
 }
 
+a, a:visited{
+    color: #0d6efd;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+mark{
+    background-color: var(--article-button-bg);
+    color: var(--couleur-texte-generale);
+}
+
 /* définition des propriétés CSS pour les tableaux en général */
 
 table{
@@ -133,6 +160,52 @@ table td:not(first-child){
     border-left: 1px solid var(--couleur-texte-generale);
 }
 
+/* style des formulaires du site */
+
+form fieldset{
+    background-color: var(--main-bg-color);
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+form fieldset legend{
+    background-color: var(--article-button-bg);
+    color: var(--bg-header);
+    text-transform: uppercase;
+    padding: 10px;
+    border: 2px solid var(--bg-header);
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+form fieldset p{
+    display: flex; 
+    justify-content:space-between;
+    flex-wrap: wrap;
+    margin-bottom: 5px;
+}
+
+form fieldset p label{
+    /*width: 200px;*/
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+form fieldset p input[type=text],
+form fieldset p input[type=email],
+form fieldset p input[type=tel],
+form fieldset p select
+{
+    /*min-width: calc( 100% - 200px );*/
+    width: 100%;
+    line-height: 1.5rem;
+    border: 1px solid #666;
+    border-radius: 5px;
+}
+
+form fieldset p select{
+    height: 2rem;
+}
 
 /* règles appliquées aux éléments dans l'architecture */
 
@@ -205,6 +278,7 @@ body > main > section > article > footer button{
     font-weight: bolder;
     padding: 5px 10px;
     line-height: 2rem;
+    border: 1px solid var(--bg-header);
     border-radius: 50%;
     background-color: var(--article-button-bg);
 }

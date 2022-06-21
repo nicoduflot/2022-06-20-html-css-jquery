@@ -79,6 +79,13 @@ vitae amet?
                         plutôt utiliser une balise générale inline 
                         <span style="color: red;font-size: 1.2em;font-family: Arial, Helvetica, sans-serif;"><code>&lt;span&gt;</code></span>.
                     </p>
+                    <p>
+                        Il existe d'autres balise qui agissent sur le texte.<br />
+                        <s>texte biffé</s><br />
+                        <u>texte souligné (pas un lien)</u><br />
+                        <mark>texte surligne</mark><br />
+                        H<sub>2</sub>SO<sub>4</sub><sup>2-</sup>
+                    </p>
                 </main>
                 <footer>
                     <a href="./article.html" title="Lien vers l'article">
@@ -443,20 +450,20 @@ vitae amet?
                             </p>
                             <p>
                                 <label for="age">Votre tranche d'age</label>
-                                <div>
-                                    <input type="radio" name="trancheAge" value="-15" /> Moins de 15 ans<br />
-                                    <input type="radio" name="trancheAge" value="16-25" checked /> Entre 16 et 25 ans<br />
-                                    <input type="radio" name="trancheAge" value="26-39" /> Entre 26 et 39 ans<br />
-                                    <input type="radio" name="trancheAge" value="40+" /> 40 ans ou plus<br />
-                                </div>
                             </p>
+                            <div>
+                                <input type="radio" name="trancheAge" value="-15" /> Moins de 15 ans<br />
+                                <input type="radio" name="trancheAge" value="16-25" checked /> Entre 16 et 25 ans<br />
+                                <input type="radio" name="trancheAge" value="26-39" /> Entre 26 et 39 ans<br />
+                                <input type="radio" name="trancheAge" value="40+" /> 40 ans ou plus<br />
+                            </div>
                             <p>
                                 <label for="moyen-reponse">Format désiré de la réponse</label>
-                                <div>
-                                    <input type="checkbox" name="contactTel"> Par téléphone<br />
-                                    <input type="checkbox" name="contactEmail"> Par e-mail<br />
-                                </div>
                             </p>
+                            <div>
+                                <input type="checkbox" name="contactTel"> Par téléphone<br />
+                                <input type="checkbox" name="contactEmail"> Par e-mail<br />
+                            </div>
                             <p>
                                 <label for="message">Votre message</label><br />
                                 <textarea name="message" placeholder="Décrivez votre demande ici :" 
