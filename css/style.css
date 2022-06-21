@@ -1,4 +1,6 @@
 
+@import url('./JMHArkham.css');
+
 /*
 dimension les plus vues en web :
 px      =>  Pixel
@@ -20,6 +22,7 @@ si 2em = 32 px, 1em = 16px
     --couleur-texte-generale: rgb(34, 33, 38);
     --bg-header: var(--couleur-texte-generale);
     --header-text-color: #f2c438;
+    --heading-font: 'JMHArkham';
 }
 
 *, *::before, *::after{
@@ -64,6 +67,11 @@ video{
 ul{
     list-style-type: none;
     padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: var(--heading-font);
 }
 
 /* règles appliquées aux éléments dans l'architecture */
@@ -85,7 +93,15 @@ body > nav{
 }
 
 body > nav > ul{
-    line-height: 1.5rem;
+    line-height: 2rem;
+}
+
+body > nav > ul > li{
+    border-top: 1px solid var(--header-text-color);
+}
+
+body > nav > ul > li:last-child{
+    border-bottom: 1px solid var(--header-text-color);
 }
 
 body > nav > ul > li a, 

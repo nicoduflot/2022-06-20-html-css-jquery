@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'JMHArkham';
+    src: url('../fonts/JMHArkham.eot');
+    src: url('../fonts/JMHArkham.eot') format('embedded-opentype'),
+         url('../fonts/JMHArkham.woff2') format('woff2'),
+         url('../fonts/JMHArkham.woff') format('woff'),
+         url('../fonts/JMHArkham.ttf') format('truetype'),
+         url('../fonts/JMHArkham.svg#JMHArkham') format('svg');
+}
