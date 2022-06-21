@@ -22,7 +22,10 @@ si 2em = 32 px, 1em = 16px
     --couleur-texte-generale: rgb(34, 33, 38);
     --bg-header: var(--couleur-texte-generale);
     --header-text-color: #f2c438;
+    --article-button-bg: #f2b544;
     --heading-font: 'JMHArkham';
+    --main-bg-color: rgba(242,242,242,0.80);
+    --page-bg-color: black;
 }
 
 *, *::before, *::after{
@@ -42,7 +45,8 @@ si 2em = 32 px, 1em = 16px
 figure.iframeVideo{
     position:relative;
     padding-bottom:56.25%;
-    height:0;overflow:hidden;
+    height:0;
+    overflow:hidden;
 }
 
 iframe.iframeVideo{
@@ -57,11 +61,22 @@ iframe.iframeVideo{
 /* règles appliquées à des éléments */
 
 img{
-    max-width: 200px;
+    max-width: 100%;
+}
+
+figure, figure figcaption{
+    background-color: var(--bg-header);
+    color: var(--header-text-color);
+    padding: 5px;
 }
 
 video{
-    max-width: 100%;
+    width: 100%;
+    max-width: 500px;
+}
+
+audio{
+    width: 100%;
 }
 
 ul{
@@ -74,11 +89,59 @@ h1, h2, h3, h4, h5, h6{
     font-family: var(--heading-font);
 }
 
+blockquote{
+    background-color: var(--main-bg-color);
+    padding: 10px;
+}
+
+/* définition des propriétés CSS pour les tableaux en général */
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table thead, table tfoot{
+    background-color: var(--bg-header);
+    color: var(--header-text-color);
+}
+
+table tbody tr{
+    border-top: 1px solid var(--couleur-texte-generale);
+}
+
+table tbody tr:last-child{
+    border-bottom: 1px solid var(--couleur-texte-generale);
+}
+
+table tbody tr:nth-of-type(odd){
+    background-color: var(--main-bg-color);
+}
+
+
+table td, table th{
+    /*
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--couleur-texte-generale);
+    */
+    word-break: break-word;
+    padding: 2px;
+}
+
+table td:not(first-child){
+    border-left: 1px solid var(--couleur-texte-generale);
+}
+
+
 /* règles appliquées aux éléments dans l'architecture */
 
 body{
     color: var(--couleur-texte-generale);
     margin: 0;
+    background: linear-gradient(to right, rgba(0,0,0,0.4), rgba(0,0,0,1)), 
+    url('../images/city-black-n-white.png') bottom left fixed repeat-x;
+    background-color: var(--page-bg-color);
 }
 
 body > header h1{
@@ -86,7 +149,8 @@ body > header h1{
 }
 
 body > header,
-body > nav{
+body > nav,
+body > footer{
     color: var(--header-text-color);
     background-color: var(--bg-header);
     padding: 5px 20px;
@@ -110,6 +174,8 @@ body > nav > ul > li a:visited{
     text-decoration: none;
     display: block;
     padding-left: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 body > nav > ul > li a:hover,
@@ -123,4 +189,27 @@ body > main{
     padding: 10px;
     margin-left: 10px;
     margin-right: 10px;
+    background-color: var(--main-bg-color);
+}
+
+body > main > section > article > footer{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+body > main > section > article > footer button{
+    text-transform: uppercase;
+    font-weight: bolder;
+    padding: 5px 10px;
+    line-height: 2rem;
+    border-radius: 50%;
+    background-color: var(--article-button-bg);
+}
+
+body > main > section > article > footer button:hover{
+    background-color: var(--couleur-texte-generale);
+    color: var(--article-button-bg);
 }
