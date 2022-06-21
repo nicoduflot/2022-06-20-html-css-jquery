@@ -172,12 +172,16 @@ facilis alias fugit dolor omnis vitae amet?
                         <code>&lt;img src="./images/image.png" alt="une image exemple" /&gt;</code><br />
                         <img src="./images/image.png" alt="une image exemple" />
                     </p>
-                    <img src="./images/skeletor-poster-masters-of-the-universe.jpg" alt="Skeletor par James White" />
+                    <a href="./images/skeletor-poster-masters-of-the-universe.jpg" target="_blank" title="Ouvrir l'image dans un nouvel onglet">
+                        <img src="./images/skeletor-poster-masters-of-the-universe.jpg" alt="Skeletor par James White" />
+                    </a>
                     <p>
                         Avec HTML5, une balise sémantique est maintenant utilisée pour contenir les balises img, et permet aussi d'associé à cette image une légende qui sera reconnue comme légende de l'image par le SEO
                     </p>
                     <figure>
+                        <a href="./images/batman-d-apres-bruce-timm-2oaz.jpg" target="_blank" title="Ouvrir l'image dans un nouvel onglet">
                         <img src="./images/batman-d-apres-bruce-timm-2oaz.jpg" alt="Batman dessiné par Bruce Timm" />
+                        </a>
                         <figcaption>
                             Batman dessiné par Bruce Timm
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ducimus a tenetur molestiae praesentium sequi perferendis dolorum iusto pariatur itaque alias quod cumque, velit assumenda cupiditate animi incidunt eligendi consequatur.
@@ -235,6 +239,43 @@ facilis alias fugit dolor omnis vitae amet?
                             Musique d'ambiance de la ville de Tristram dans le premier Diablo
                         </figcaption>
                     </figure>
+                    <h3>Inclure des media vidéo et audio hébergés par des sites tiers</h3>
+                    <p>
+                        Youtube, dailymotion, etc propose de partager leur contenu vidéo via des cadres intégrés (iframe) dont ils fournissent le code HTML dans leurs boutons de partage.
+                    </p>
+                    <h4>Partgé par youtube</h4>
+                    <figure class="iframeVideo">
+                        <iframe class="iframeVideo" src="https://www.youtube.com/embed/1H5g4Mh-G6I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </figure>
+                    <h4>Partagé par dailymotion</h4>
+                    <figure class="iframeVideo" style="">
+                        <iframe class="iframeVideo" style="" frameborder="0" type="text/html" src="https://www.dailymotion.com/embed/video/x1nofw" width="100%" height="100%" allowfullscreen ></iframe>
+                    </figure>
+                    <h3>Les iframes</h3>
+                    <p>
+                        L'iframe est un cadre défini, qui affiche à l'intérieur une autre page html.
+                    </p>
+                    <figure class="iframeVideo">
+                        <iframe class="iframeVideo" src="./documents/CRAM.pdf"></iframe>
+                    </figure>
+                    <figure class="iframeVideo">
+                        <iframe class="iframeVideo" src="./documents/texte.txt"></iframe>
+                    </figure>
+                    <h4>Cadre dans un cadre et cible des liens</h4>
+                    <p>
+                        <a href="./mail.html" target="monIframeTest">Ouvrir mail.html dans le cadre ci-dessous</a>
+                    </p>
+                    <p>
+                        <a href="./iframe-1.html" target="monIframeTest">remettre la page "normale" dans le cadre ci-dessous</a>
+                    </p>
+                    <iframe name="monIframeTest" src="./iframe-1.html" width="100%" height="300px"></iframe>
+                    <p>
+                        Dans les années 1990 - 2000, on utilisait des jeux de cadre pour avoir des sites "dynamique", qui permettait d'avoir un fichier unique pour la navigation.<br />
+                        <a href="./frameset.html" target="_blank">Un exemple</a>
+                    </p>
+                    <p>
+                        Pour pouvoir afficher cette autre page, il faut que le serveur hébergeur de la page autorise l'affichage via iframe
+                    </p>
                     <h3>Les formulaires HTML</h3>
                     <p>
                         Les formulaires servent a récupérer des informations pour traitement, par exemple,
