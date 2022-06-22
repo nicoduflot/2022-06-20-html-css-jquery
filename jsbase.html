@@ -8,6 +8,82 @@
     <!-- appeler notre fichier de style CSS pour l'affichage écran -->
     <link rel="stylesheet" href="./css/style.css" media="screen" />
     <link rel="stylesheet" href="./css/print.css" media="print" />
+    <script>
+        /*
+        commentaire en bloc en JS
+        */
+
+        // commentaire sur une ligne
+
+        // Variables
+        var prenom = "Jean"; //var a tendance à disparaître, var déclare les variable avec un scope élargi.
+        let nom = "Durand"; // le scope est restreint
+        let message = "Coucou";
+        function monPrenom(test){
+            console.log(test + " " + prenom);
+            //console.log(nom);
+            prenom = "test";
+            let nom2 = "test"; 
+            console.log(nom2);
+        }
+        monPrenom(message);
+        console.log(prenom);
+        //console.log(nom2); // génère une erreur : nom2 a été créé dans la fonction, mais pas dans le périmètre du console.log
+
+        /* constantes */
+
+        const CAFE = 'Arabica';
+
+        /* JS est un langage non typé */
+        /*
+            Typage : 
+            [Primitif]
+            numérique
+                int => entier
+                float => virgule flottante
+            booléen
+                bool => true/false
+            
+            [Référence]
+            String => chaîne de caractères
+            Array => tableau
+            Object => élément de type Objet
+            JSON => JavaScript Object Notation
+        */
+
+        /*
+            Opérateurs :
+            Mathématiques : + - * / % ** (pow)
+            logiques : ! (non) && (et) || (ou) ^ (ou exclusif binaire)
+            Incrémentation : ++ --
+            Comparatif : >  < <= >= == != (== et != comparent le contenu de la variable, pas le type)
+            => === !== (compare contenu et type)
+            "0" == 0 => vrai
+            "0" === 0 => faux (car type string !== int) 
+        */
+
+        console.log(Math.pow(2,3));
+        console.log(2**3);
+
+        let ctpTest = 0;
+        console.log(ctpTest); // affiche 0
+        ctpTest++; // => ctpTest = ctpTest + 1;
+        console.log(ctpTest); // affiche 1
+        console.log(ctpTest++); // affiche 1 et ensuite il ajout 1 à la variable
+        console.log(ctpTest); // affiche 2
+        console.log(++ctpTest); // ici on ajoute 1 à la variable PUIS on l'affiche => 3
+
+        let y;
+        console.log(y);
+        if(y){
+            console.log('la variable y existe et est définie');
+        }
+
+        if(!y){
+            console.log('la variable y existe seulement en idée');
+        }
+
+    </script>
 </head>
 <body>
     <header>
