@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'VarsityTeamBold';
+    src: url('../fonts/VarsityTeamBold.eot');
+    src: url('../fonts/VarsityTeamBold.eot') format('embedded-opentype'),
+         url('../fonts/VarsityTeamBold.woff2') format('woff2'),
+         url('../fonts/VarsityTeamBold.woff') format('woff'),
+         url('../fonts/VarsityTeamBold.ttf') format('truetype'),
+         url('../fonts/VarsityTeamBold.svg#VarsityTeamBold') format('svg');
+}

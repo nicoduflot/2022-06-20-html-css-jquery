@@ -1,0 +1,181 @@
+@import url('./VarsityTeamBold.css');
+@import url('./robotoregular.css');
+
+:root{
+    --menu-link-color: #BF0449;
+    --menu-bg: #F2B705;
+    --header-bg: #F2B705;
+    --heading-color: #BF0449;
+    --article-bg: rgba(140, 118, 50, 0.2);
+}
+
+h1, h2, h3, h4, h5, h6, body >nav > ul > li{
+    font-family: 'VarsityTeamBold';
+    color: var(--heading-color);
+}
+
+h2 a, h2 a:visited{
+    color: var(--heading-color);
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+img{
+    max-width: 250px;
+}
+
+body{
+    font-family: 'RobotoRegular';
+    margin: 0;
+}
+
+figure{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+figure figcaption{
+    text-align: center;
+}
+
+body > header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 20vh;
+    background-color: var(--header-bg);
+}
+
+body > nav{
+    background-color: var(--menu-bg);
+}
+
+body > nav > ul{
+    line-height: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body > nav > ul > li a, 
+body > nav > ul > li a:visited{
+    color: var(--header-text-color);
+    text-decoration: none;
+    display: block;
+    padding-left: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+body > main, body > header > .header-h1{
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    background-color: var(--main-bg-color);
+}
+
+body > main > section > article{
+    padding: 10px;
+    background-color: var(--article-bg);
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+
+
+@media (min-width: 576px){
+    body > header{
+       
+        height: 10vh;
+    }
+
+    body > main, body > nav > ul, body > header > .header-h1{
+        max-width: 540px;
+    }
+
+    body > nav{
+        padding: 5px 0;
+    }
+
+    body > nav > ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    body > nav > ul > li{
+        border-bottom: 1px solid var(--header-text-color);
+    }
+    
+    body > nav > ul > li a, 
+    body > nav > ul > li a:visited{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media (min-width: 768px){
+    body > main, body > nav > ul, body > header >.header-h1{
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    body > main, body > nav > ul, body > header > .header-h1{
+      max-width: 960px;
+    }
+
+    body > main > section{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    body > main > section > article{
+        width: calc( 50% - 40px );
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    body > main > section > article:last-child:nth-of-type(2n+1){
+        width: calc( 100% - 20px );
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+  }
+  @media (min-width: 1200px) {
+    body > main, body > nav > ul, body > header > .header-h1{
+      max-width: 1140px;
+    }
+  }
+  @media (min-width: 1400px) {
+    body > main, body > nav > ul, body > header > .header-h1{
+      max-width: 1320px;
+    }
+
+    body > main > section > article{
+        width: calc( 33% - 20px );
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    body > main > section > article:last-child:nth-of-type(3n+2){
+        width: calc( 66% - 20px );
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    body > main > section > article:last-child:nth-of-type(3n+1)
+    {
+        width: calc( 100% - 20px );
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    /*body > main > section:nth-child(4) > article*/
+  }
