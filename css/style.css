@@ -231,6 +231,8 @@ body > footer{
 
 body > nav > ul{
     line-height: 2rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 body > nav > ul > li{
@@ -260,8 +262,9 @@ body > nav > ul > li a:focus-visible{
 
 body > main{
     padding: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
     background-color: var(--main-bg-color);
 }
 
@@ -287,3 +290,95 @@ body > main > section > article > footer button:hover{
     background-color: var(--couleur-texte-generale);
     color: var(--article-button-bg);
 }
+
+
+/* 
+media queries : 
+    précision css quand à divers paramètre comme le type d'affichage 
+    ou la largeur d'affichage de l'appareil  
+*/
+
+@media (min-width: 576px){
+    body > main, body > nav > ul{
+        max-width: 540px;
+    }
+
+    body > nav{
+        padding: 5px 0;
+    }
+
+    body > nav > ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    body > nav > ul > li{
+        border-bottom: 1px solid var(--header-text-color);
+    }
+    
+    body > nav > ul > li a, 
+    body > nav > ul > li a:visited{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media (min-width: 768px){
+    body > main, body > nav > ul{
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    body > main, body > nav > ul{
+      max-width: 960px;
+    }
+
+    body > main > section{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    body > main > section > article{
+        width: calc( 50% - 20px );
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    body > main > section > article:last-child:nth-of-type(2n+1){
+        width: calc( 100% - 20px );
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+  }
+  @media (min-width: 1200px) {
+    body > main, body > nav > ul{
+      max-width: 1140px;
+    }
+  }
+  @media (min-width: 1400px) {
+    body > main, body > nav > ul{
+      max-width: 1320px;
+    }
+
+    body > main > section > article{
+        width: calc( 33% - 20px );
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    body > main > section > article:last-child:nth-of-type(3n+2){
+        width: calc( 66% - 20px );
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    body > main > section > article:last-child:nth-of-type(3n+1)
+    {
+        width: calc( 100% - 20px );
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    /*body > main > section:nth-child(4) > article*/
+  }
