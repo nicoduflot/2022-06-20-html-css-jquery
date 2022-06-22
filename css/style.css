@@ -27,6 +27,8 @@ si 2em = 32 px, 1em = 16px
     --heading-font: 'JMHArkham';
     --main-bg-color: rgba(242,242,242,0.80);
     --page-bg-color: black;
+    --grid-div-border: rgb(60, 90, 172);
+    --grid-div-bg: rgba(60, 90, 172, 0.5);
 }
 
 *, *::before, *::after{

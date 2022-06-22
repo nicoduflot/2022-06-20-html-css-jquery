@@ -1,0 +1,90 @@
+/* les grilles en CSS */
+
+/* 
+il faut un conteneur qui possède la propriété css display: grid 
+pour pouvoir utiliser le principe des grille à l'intérieur de celui-ci 
+*/
+ figure{
+    text-align: center;
+ }
+
+ figcaption{
+    text-align: left;
+ }
+
+ul > li > ul{
+    list-style: circle;
+    margin-left: 30px;
+}
+
+h3{
+    margin: 0;
+}
+
+.gridWrapper{
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 1rem;
+    grid-auto-rows: auto;
+}
+
+/*.gridDiv{
+    border: 1px solid var(--grid-div-border);
+    background-color: var(--grid-div-bg);
+}*/
+
+/* 
+media queries : 
+    précision css quand à divers paramètre comme le type d'affichage 
+    ou la largeur d'affichage de l'appareil  
+*/
+
+@media (min-width: 576px){
+   .gridWrapper{
+        grid-template-columns: repeat(2, calc( calc( 100% - 30px ) / 2 ));
+   }
+
+   .un, .dessinsAnimes, .comics, .recompenses, .oeuvres, .filmo{
+        grid-column: 1 / 3;
+   }
+}
+
+@media (min-width: 768px){
+   .dessinsAnimes{
+    columns: 2;
+   }
+}
+
+@media (min-width: 992px) {
+    .gridWrapper{
+        grid-template-columns: repeat(3, calc( calc( 100% - 30px ) / 3 ));
+       }
+
+       .un, .dessinsAnimes{
+        grid-column: 1 / 4;
+   }
+
+   .jeunesse, .filmo{
+    grid-column: 2 / 4;
+   }
+
+   .recompenses{
+    grid-column: 3 / 4;
+   }
+
+   .oeuvres{
+    grid-column: 1 / 2;
+   }
+
+   .filmo{
+    columns: 2;
+   }
+}
+
+@media (min-width: 1200px) {
+
+}
+
+@media (min-width: 1400px) {
+
+}

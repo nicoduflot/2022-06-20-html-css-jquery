@@ -1,0 +1,36 @@
+@import url('./JMHArkham.css');
+:root{
+    --couleur-texte-generale: rgb(34, 33, 38);
+    --bg-header: var(--couleur-texte-generale);
+    --header-text-color: #f2c438;
+    --article-button-bg: #f2b544;
+    --heading-font: 'JMHArkham';
+    --main-bg-color: rgba(242,242,242,0.80);
+    --page-bg-color: black;
+    --grid-div-border: rgb(60, 90, 172);
+    --grid-div-bg: rgba(60, 90, 172, 0.5);
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: var(--heading-font);
+}
+
+h1{
+    margin-bottom: 0;
+}
+
+header{
+    padding: 10px;
+}
+
+body{
+    color: var(--couleur-texte-generale);
+    margin: 0;
+    background: linear-gradient(to right, rgba(0,0,0,0.4), rgba(0,0,0,1)), 
+    url('../images/city-black-n-white.png') bottom left fixed repeat-x;
+    background-color: var(--page-bg-color);
+}
+
+body > main{
+    background-color: var(--main-bg-color);
+}
