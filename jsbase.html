@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/style.css" media="screen" />
     <link rel="stylesheet" href="./css/print.css" media="print" />
     <script>
+        console.log('Début du chargement de la page');
         /*
         commentaire en bloc en JS
         */
@@ -23,7 +24,7 @@
             console.log(test + " " + prenom);
             //console.log(nom);
             prenom = "test";
-            let nom2 = "test"; 
+            let nom2 = "test";
             console.log(nom2);
         }
         monPrenom(message);
@@ -83,6 +84,335 @@
             console.log('la variable y existe seulement en idée');
         }
 
+        let z = "12";
+        console.log(z == 12);
+        console.log(z === 12);
+
+        /*
+        * Code Java
+        *
+        * String a = "Chaîne";
+        * a.equal("Chaîne"); // true
+        *
+        * String b = null;
+        * b.equal("Chaine"); // Retourne un exception de type nullPointerException
+        *
+        * //yoda code
+        * "Chaîne".equal(b); // retourne false
+        */
+
+        console.log('l\'ordinateur\ntest');
+
+        // literal template => modèle litéral
+        let chaineQuote = 'Lorem ipsum';
+        //chaineQuote = chaineQuote + ' sit amet etc.';
+        chaineQuote += ' sit amet etc.';
+        chaineQuote += ' sit amet etc.' + 
+        ' and so long...';
+
+        console.log(chaineQuote);
+
+        // backtick ou backquote ``
+        let chaineBackQuote = `\t\tLorem ipsum 
+        sit amet
+        and so long`;
+        console.log(chaineBackQuote);
+
+        // utilisation des template litéraux
+        let template = `ctpTest = ${ctpTest}; 2 + 3 = ${2 + 3}, l'apostrophe est "possible"`;
+
+        console.log(template);
+
+        // tableaux
+        //var cars = new Array('Peugeot', 'Ford');
+        let cars = ['Peugeot', 'Ford'];
+        console.log(cars);
+        console.log(typeof cars);
+
+        cars.push('Hyundai');
+        console.log(cars);
+
+        let lastCarEntry = cars.pop();
+        console.log(cars);
+        console.log(lastCarEntry);
+
+        cars.push(lastCarEntry);
+
+        let firstEntryCar = cars.shift();
+        console.log(cars);
+        console.log(firstEntryCar);
+
+        cars.push(firstEntryCar);
+        console.log(cars);
+        console.log(cars.length);
+
+        let middleToEndEntry = cars.splice(1, 2);
+        console.log(middleToEndEntry);
+        console.log(cars);
+
+        cars.push('Renault', 'Fiat');
+
+        console.log(cars);
+
+        cars.splice(1, 0, middleToEndEntry[0], middleToEndEntry[1]);
+
+        console.log(cars);
+
+        let oneCarSelected = cars.slice(1, 2);
+        console.log(oneCarSelected);
+        console.log(cars);
+
+        //let cloneCars = cars; // ne crée pas un nouveau tableau mais un alias du tableau référencé
+        //cloneCars.pop(); 
+        // les actions sur l'alias agissent sur le tableau d'origine, ce n'est donc pas un nouveau tableau mais
+        // une seconde référence à ce tableau
+
+        let cloneCars = cars.slice(); // ici, on récupère le contenu de cars et on le copie dans cloneCars
+        cloneCars.pop(); // les actions sur cloneCars n'affecte pas le tableau originel
+        console.log(cloneCars);
+        console.log(cars);
+
+        /*  parcourir les tableau => les boucles */
+
+        /* boucle for in */
+        for(let index in cars){
+            console.log(`cars[${index}] = ${cars[index]}`);
+        }
+
+        /* depuis es6 boucle for of */
+        let i = 0;
+        for(let value of cars){
+            console.log(`cars[${i}] = ${value}`);
+            i++;
+        }
+
+        /* depuis es6 utiliser for of avec une fonction du tableau .entries */
+        for(let entry of cars.entries()){
+            
+            console.log(entry);
+        }
+
+        let entry = '';
+        
+        /* la fonction de tableau foreach */
+        cars.forEach(function(value, index, tab){
+            console.log(`cars[${index}] = ${value} dans ${tab}`);
+            if('Hyundai' === value){
+                console.log(`on a trouvé la Hyundai à l'index ${index} : suppression`);
+                tab.splice(index, 1);
+            }
+        });
+
+        // objet litéral
+        let objLit = {
+            nom: 'Doe',
+            prenom: 'John',
+            age: 42,
+            coucouObj: function(){
+                //console.log(`Coucou ${this.nom}`); // ici la méthode affiche dans la console
+                return `Coucou ${this.nom}`; // ici la méthode renvoie un résultat sans affichage
+            }
+        };
+
+        console.log(objLit);
+        console.log(typeof objLit);
+
+        console.log(objLit.nom);
+        //objLit.coucouObj(); // si la méthode affiche dans la console, il suffit d'appeler la méthode
+        console.log(objLit.coucouObj()); // ici j'affiche le résultat renvoyé par la méthode qui n'affiche pas le résultat
+
+        // Destructuration
+
+        let list = [1, , 3];
+        // ajouter chaque élément aux variables suivantes : a, b et c
+        /*
+        let a = list[0];
+        let b = list[1];
+        let c = list[2];
+        */
+
+        // la destructuration permet de faire ça plus simplement (et rapidement)
+
+        let [a, b, c] = list;
+        /* 
+         <=> [a, b, c] = [1, 2, 3]
+         a = 1
+         b = 2
+         c = 3
+        */
+
+        console.log(`a = ${a}, b = ${b}, c = ${c}`);
+
+        let [d, ,f, g = 0] = list;
+        console.log(`d = ${d}, f = ${f}, g = ${g}`);
+        [d, ,f = 5, g = 0] = list;
+        console.log(`d = ${d}, f = ${f}, g = ${g}`);
+
+        let obj = {
+            lastName: 'Bond', 
+            firstName: 'James'
+        };
+
+        console.log(obj.lastName);
+
+        let {lastName, firstName} = obj; 
+        // crée des "raccourcis" pour appeler les attribut de l'objet
+
+        console.log(firstName);
+        console.log(lastName);
+
+        let {nomEspion = lastName, prenomEspion = firstName} = obj; 
+        // permet de créer des alias pour les attribut d'un objet
+
+        console.log(prenomEspion);
+        console.log(nomEspion);
+
+        let [number1, number2] = [12, 54];
+        console.log(`avant le swap number1 = ${number1} et number2 = ${number2}`);
+        /*
+        sans la destructuration, pour échanger les valeurs de number1 et number2 il faut utiliser
+        une variable temporaire
+        let temp = number1;
+        number1 = number2;
+        number2 = temp;
+        */
+        [number1, number2] = [number2, number1];
+        console.log(`après le swap number1 = ${number1} et number2 = ${number2}`);
+
+        function somme(a=0, b=0){
+            return a + b;
+        }
+
+        let r = somme(1, 2); // 3
+        console.log(`somme de 1 + 2 = ${r}`);
+        let rr = somme(1);
+        console.log(`somme de 1 + ? = ${rr}`);
+
+        /* opérateur variadique => rest parameter ...valeurs */
+
+        function sommeX(...valeurs){
+            console.log(valeurs);
+            let resultat = 0;
+            for(let valeur of valeurs){
+                resultat += valeur;
+            }
+            return resultat;
+        }
+
+        console.log(sommeX(1,2,3,4));
+
+        function sommeYFoisZ(multiplicateur, ...valeurs){
+            console.log(valeurs);
+            let resultat = 0;
+            for(let valeur of valeurs){
+                resultat += valeur*multiplicateur;
+            }
+            return resultat;
+        }
+
+        console.log(sommeYFoisZ(-2,2,-3,4));
+        console.log(sommeYFoisZ(2));
+        console.log(sommeYFoisZ());
+
+        /*
+        fonction auto-exécutée => ( fonction(param1, param2){ //code de la fonction } )( param1, param2 );
+        */
+
+        (function(multiplicateur, ...valeurs){
+            console.log(valeurs);
+            let resultat = 0;
+            for(let valeur of valeurs){
+                resultat += valeur*multiplicateur;
+            }
+            console.log(resultat);
+        })(1,2,3,4);
+
+        /* opérateur arrow => */
+        ( function(){
+            console.log('auto-exécuté');
+        })();
+
+        ( (test) => {
+            console.log('auto-exécuté avec => pour la fonction de rappel (callback function) ' + test);
+        })('ha ha');
+
+        /* l'opérateur arrow est utile en javascript pour éviter ce qu'on appelle "les conséquences" */
+
+        let object = {
+            numbers: [1, 2, 3],
+            pourChaque: function(){
+                console.log(this);
+                let _this = this;
+                this.numbers.forEach(function(value){
+                    console.log(this);
+                    console.log(_this);
+                    //(function(){ console.log(_this)})();
+                });
+            },
+            pourChaque2: function(){
+                console.log(this);
+                this.numbers.forEach((value) => {
+                    console.log(this);
+                    /*
+                    (function(){ console.log(this)})();
+                    (() => { console.log(this)})();
+                    */
+                });
+            }
+
+        };
+
+        object.pourChaque();
+        object.pourChaque2();
+
+        console.log(document);
+        /* Manipuler le DOM */
+        /*
+        let header = document.querySelector("body > header");
+        console.log(header);
+        */
+        // ça ne fonctionne pas car le reste de la page n'est pas chargé à l'exécution du script
+
+        // il faut alors "guetter" l'évenement de fin de chargement de la page avant de pouvoir récupérer des éléments de cette page
+
+        // window (le navigateur) renvoie un évenement à la fin du chargement de la page => DOMContentLoaded
+
+        window.addEventListener('DOMContentLoaded', function(){
+            console.log('Toute la page est chargée');
+            let header = document.querySelector("body > header");
+            console.log(header);
+            header.addEventListener('click', function(event){
+                console.log('on a cliqué sur le header');
+                console.log(event.target);
+                console.log(header.innerHTML);
+            });
+
+            /*
+            document.addEventListener('click', function(event){
+                console.log(event.target);
+            });
+            */
+
+            // on peut utiliser d'autre méthode que querySelector pour repérer un élément du DOM
+
+            let pClickMe = document.getElementById('clickMe');
+            console.log(pClickMe);
+
+            let allP = document.querySelectorAll('p');
+            console.log(allP);
+
+            allP.forEach(function(paragraphe){
+                //console.log(paragraphe);
+                paragraphe.addEventListener('click', function(){
+                    console.log(paragraphe.innerText);
+                });
+            })
+
+            h2ClickMe = document.querySelector('.clickMe');
+            console.log(h2ClickMe);
+
+        });
+
     </script>
 </head>
 <body>
@@ -114,7 +444,7 @@
     <main>
         <section>
             <article>
-                <h2>Petits rappels</h2>
+                <h2 class="clickMe">Petits rappels</h2>
                 <p>
                     On va faire un petit rappel de javascript 
                     en utilisant la console du navigateur.
@@ -161,4 +491,7 @@
         </aside>
     </footer>
 </body>
+<script>
+    console.log('fin de chargement de la page');
+</script>
 </html>
