@@ -68,7 +68,7 @@
 
         let ctpTest = 0;
         console.log(ctpTest); // affiche 0
-        ctpTest++; // => ctpTest = ctpTest + 1;
+        ctpTest++; // => ctpTest = ctpTest + 1; // cptTest += 1;
         console.log(ctpTest); // affiche 1
         console.log(ctpTest++); // affiche 1 et ensuite il ajout 1 à la variable
         console.log(ctpTest); // affiche 2
@@ -250,12 +250,16 @@
 
         let obj = {
             lastName: 'Bond', 
-            firstName: 'James'
+            firstName: 'James',
+            helloYou: ()=>{
+                `Hello ${this.firstName}`;
+            }
         };
 
         console.log(obj.lastName);
+        console.log(obj.helloYou());
 
-        let {lastName, firstName} = obj; 
+        let {lastName, firstName, helloYou} = obj; 
         // crée des "raccourcis" pour appeler les attribut de l'objet
 
         console.log(firstName);
@@ -373,9 +377,9 @@
         */
         // ça ne fonctionne pas car le reste de la page n'est pas chargé à l'exécution du script
 
-        // il faut alors "guetter" l'évenement de fin de chargement de la page avant de pouvoir récupérer des éléments de cette page
+        // il faut alors "guetter" l'évènement de fin de chargement de la page avant de pouvoir récupérer des éléments de cette page
 
-        // window (le navigateur) renvoie un évenement à la fin du chargement de la page => DOMContentLoaded
+        // window (le navigateur) renvoie un évènement à la fin du chargement de la page => DOMContentLoaded
 
         window.addEventListener('DOMContentLoaded', function(){
             console.log('Toute la page est chargée');
@@ -437,7 +441,10 @@
                 <a href="./exocv.html" title="Liens vers l'exercice cv css rwd">CV</a>
             </li>
             <li>
-                <a href="./jsbase.html" title="Liens vers les base js">JS bases</a>
+                <a href="./jsbase.html" title="Liens vers les bases js">JS bases</a>
+            </li>
+            <li>
+                <a href="./jquerybase.html" title="Liens vers les bases jquery">JQuery bases</a>
             </li>
         </ul>
     </nav>
