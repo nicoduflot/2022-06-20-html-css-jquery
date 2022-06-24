@@ -250,6 +250,18 @@
             // annuler tout les click sur les p dans body
             // délégation
 
+            /* annuler un écouteur d'évènement délégué */
+
+            /* évènement délégué */
+            $('body').on('click', 'p', function(){
+                console.log('click sur un p du body');
+            });
+
+            /* annuler l'évènement délégué */
+            $('#annuleClickBody').click(function(){
+                $('body').off('click', 'p');
+            });
+
         });
     </script>
 </head>
@@ -279,6 +291,9 @@
             </li>
             <li>
                 <a href="./jquerybase.html" title="Liens vers les bases jquery">JQuery bases</a>
+            </li>
+            <li>
+                <a href="./jquerycss.html" title="Liens vers les jquery et css">JQuery CSS</a>
             </li>
         </ul>
     </nav>
