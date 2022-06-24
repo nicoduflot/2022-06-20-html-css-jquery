@@ -90,6 +90,12 @@ si 2em = 32 px, 1em = 16px
     margin: 2px;
 }
 
+
+#allPosts{
+    height: 300px;
+    overflow: auto;
+}
+
 figure.iframeVideo{
     position:relative;
     padding-bottom:56.25%;

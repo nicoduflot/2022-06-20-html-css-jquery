@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formation HTML5 / CSS3, RWD, JS, Ajax et jQuery - introduction</title>
+    <!-- Ici se trouvera l'appel des fichiers de type css et l'écriture js ou l'appel de script js -->
+    <!-- appeler notre fichier de style CSS pour l'affichage écran -->
+    <link rel="stylesheet" href="./css/style.css" media="screen" />
+    <link rel="stylesheet" href="./css/print.css" media="print" />
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script src="./js/jqueryajax.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Formation HTML5 / CSS3, RWD, JS, Ajax et jQuery</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="./index.html" title="Introduction">Introduction</a>
+            </li>
+            <li>
+                <a href="./test/test.html" title="Page test navigation">Page test navigation</a>
+            </li>
+            <li>
+                <a href="./cssgrid.html" title="Liens vers la page des grilles en css">Grilles CSS</a>
+            </li>
+            <li>
+                <a href="./bootstrap.html" title="Liens vers la démo de bootstrap">Bootstrap</a>
+            </li>
+            <li>
+                <a href="./exocv.html" title="Liens vers l'exercice cv css rwd">CV</a>
+            </li>
+            <li>
+                <a href="./jsbase.html" title="Liens vers les bases js">JS bases</a>
+            </li>
+            <li>
+                <a href="./jsajax.html" title="Liens vers js ajax">JS AJAX</a>
+            </li>
+            <li>
+                <a href="./jquerybase.html" title="Liens vers les bases jquery">JQuery bases</a>
+            </li>
+            <li>
+                <a href="./jquerycss.html" title="Liens vers le jquery et css">JQuery CSS</a>
+            </li>
+            <li>
+                <a href="./jqueryajax.html" title="Liens vers le jquery ajax">JQuery AJAX</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <h2>jQuery & AJAX</h2>
+        <section>
+            <article>
+                <h2>Ajax avec JQuery</h2>
+                <pre>
+jQuery( function($){
+    $.ajax();
+});
+                </pre>
+                <p>
+                    La fonction ajax() de JQuery contient les tests de compatibilité 
+                    pour instancier XHR
+                </p>
+                <p>
+                    Lors de ces appels, il faut utiliser des paramètres, tel l'url de la source, 
+                    la méthode (get pour récupérer les données, post pour en envoyer), etc.
+                </p>
+            </article>
+            <article>
+                <h2>Utiliser $.ajax()</h2>
+                <button id="showAllPosts">
+                    Tous les posts
+                </button>
+                <div id="allPosts">
+
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <h2>.get() et .post()</h2>
+                <p>
+                    Les fonctions .get() et .post() sont des raccourcis de $.ajax(), 
+                    elles utilisent donc soit GET ou POST.
+                    Elle recquiers des argument comme la fonction $.ajax()
+                </p>
+            </article>
+        </section>
+        <section>
+            <article>
+                <h2>Afficher les users avec .get()</h2>
+                <button id="showAllUsers">
+                    Tous les utilisateurs
+                </button>
+                <div id="allUsers">
+
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <aside>
+            &copy;Dawan Juin 2022
+        </aside>
+    </footer>
+</body>
+</html>
