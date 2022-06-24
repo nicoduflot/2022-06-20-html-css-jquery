@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formation HTML5 / CSS3, RWD, JS, Ajax et jQuery - introduction</title>
+    <!-- Ici se trouvera l'appel des fichiers de type css et l'écriture js ou l'appel de script js -->
+    <!-- appeler notre fichier de style CSS pour l'affichage écran -->
+    <link rel="stylesheet" href="./css/style.css" media="screen" />
+    <link rel="stylesheet" href="./css/print.css" media="print" />
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script src="./js/jquerycss.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Formation HTML5 / CSS3, RWD, JS, Ajax et jQuery</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="./index.html" title="Introduction">Introduction</a>
+            </li>
+            <li>
+                <a href="./test/test.html" title="Page test navigation">Page test navigation</a>
+            </li>
+            <li>
+                <a href="./cssgrid.html" title="Liens vers la page des grilles en css">Grilles CSS</a>
+            </li>
+            <li>
+                <a href="./bootstrap.html" title="Liens vers la démo de bootstrap">Bootstrap</a>
+            </li>
+            <li>
+                <a href="./exocv.html" title="Liens vers l'exercice cv css rwd">CV</a>
+            </li>
+            <li>
+                <a href="./jsbase.html" title="Liens vers les bases js">JS bases</a>
+            </li>
+            <li>
+                <a href="./jquerybase.html" title="Liens vers les bases jquery">JQuery bases</a>
+            </li>
+            <li>
+                <a href="./jquerycss.html" title="Liens vers les jquery et css">JQuery CSS</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <h2>jQuery & CSS</h2>
+        <section>
+            <article>
+                <header>
+                    <h2>.css()</h2>
+                </header>
+                <main>
+                    <article>
+                        <p>
+                            Dans l'introduction, on a déjà vu quelques utilisation de .css()
+                            Elle permet entre autre de récupérer les valeurs css d'une propriété,
+                            de changer les valeurs css d'une propriété, et même des définir plusieurs 
+                            nouvelle propriétés CSS d'un élément d'un coup.
+                        </p>
+                    </article>
+                </main>
+            </article>
+        </section>
+        <section>
+            <article>
+                <head>
+                    <h2>Récupérer la valeur d'une propriété</h2>
+                </head>
+                <main>
+                    <p id="getPropValue" style="color: rgb(0, 0, 139);font-weight: bold;">
+                        en cliquant ici, je vais récupérer la valeur 
+                        de la propriété CSS color de ce paragraphe
+                    </p>
+                    <p id="resGetPropValue">
+                        
+                    </p>
+                </main>
+            </article>
+            <article>
+                <h2>Changer la valeur d'une propriété</h2>
+                <p id="setPropValueRed">
+                    Mettre le lorem en rouge
+                </p>
+                <p id="setPropValueBlack">
+                     Mettre le lorem en noir
+                 </p>
+                 <p id="resSetPropValue" 
+                     style="color: darkblue; font-weight: bold;">
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                     Atque vero minus ipsam earum quod error ad aperiam, nisi 
+                     labore nulla quos possimus quasi? Necessitatibus 
+                     consectetur ratione perferendis tenetur voluptatibus qui.
+                 </p>
+            </article>
+        </section>
+        <h2>Animer les éléments</h2>
+       <section>
+            <article>
+                <h2>.animate()</h2>
+                <p>
+                    .animate() change les propriétés css en donnant la possibilité 
+                    d'y adjoindre une animation.
+                    On lui donne en paramètres les propriétés qui changent 
+                    (sous forme d'objets litéraux)<br />
+                    <code>{attribut01: 'valeur01', attribut02: 'valeur02'}</code>
+                </p>
+                <p>
+                    On peut agir sur la durée
+                </p>
+                <ul>
+                    <li>"slow" (600 milliseconde)</li>
+                    <li>"normal" (par défaut 400 millisecondes)</li>
+                    <li>"fast" (200 millisecondes)</li>
+                    <li>une durée choisie en millisecondes</li>
+                </ul>
+                <p>
+                    le type d'animation
+                </p>
+                <ul>
+                    <li>swing (par défaut) : de plus en plus vite puis ralentissemnt vers la fin</li>
+                    <li>linear : la même vitesse du début à la fin.</li>
+                </ul>
+                <p>
+                    une fonction a déclencher à la fin de l'animation : complete
+                </p>
+                <p id="animation01">
+                    Animez les blocs en dessous
+                </p>
+                <div id="blocAnimate01" class="blocAnimate">
+                    swing
+                </div>
+                <div id="blocAnimate02" class="blocAnimate">
+                    linear
+                </div>
+                <p id="anim01Reset">
+                    Reset l'état des bloc
+                </p>
+            </article>
+            <article>
+                <h2>.show()  .hide() .toggle()</h2>
+                <p>
+                    Ces trois fonction sont des raccourcis pour changer 
+                    l'état d'affichage d'un élément
+                </p>
+                <p>
+                    <button id="show01">show</button>&nbsp;&nbsp;
+                    <button id="hide01">hide</button>&nbsp;&nbsp;
+                    <button id="toggle01">toggle</button>
+                </p>
+                <div id="threeStates" class="threeStates"></div>
+            </article>
+       </section>
+    </main>
+    <footer>
+        <aside>
+            &copy;Dawan Juin 2022
+        </aside>
+    </footer>
+</body>
+</html>
