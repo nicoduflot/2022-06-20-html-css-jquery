@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formation HTML5 / CSS3, RWD, JS, Ajax et jQuery - introduction</title>
+    <!-- Ici se trouvera l'appel des fichiers de type css et l'écriture js ou l'appel de script js -->
+    <!-- appeler notre fichier de style CSS pour l'affichage écran -->
+    <link rel="stylesheet" href="./css/style.css" media="screen" />
+    <link rel="stylesheet" href="./css/print.css" media="print" />
+    <script src="./js/ajaxjs.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            let buttonsRead = document.querySelectorAll('button.read');
+            console.log(buttonsRead);
+            buttonsRead.forEach( btn => {
+                btn.addEventListener('click', () => {
+                    //console.log(btn.dataset);
+                    let url = btn.dataset.url;
+                    //console.log(url);
+                    fetch(url)
+                    .then( response => response.json() )
+                    .then ( data => { 
+                        console.log(data);
+                        let tabResult = jsonToTableObject(data); 
+                        console.log(tabResult);
+                        document.querySelector('#result > thead').innerHTML = tabResult[0];
+                        document.querySelector('#result > tbody').innerHTML = tabResult[1];
+                    });
+                });
+            } );
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Formation HTML5 / CSS3, RWD, JS, Ajax et jQuery</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="./index.html" title="Introduction">Introduction</a>
+            </li>
+            <li>
+                <a href="./test/test.html" title="Page test navigation">Page test navigation</a>
+            </li>
+            <li>
+                <a href="./cssgrid.html" title="Liens vers la page des grilles en css">Grilles CSS</a>
+            </li>
+            <li>
+                <a href="./bootstrap.html" title="Liens vers la démo de bootstrap">Bootstrap</a>
+            </li>
+            <li>
+                <a href="./exocv.html" title="Liens vers l'exercice cv css rwd">CV</a>
+            </li>
+            <li>
+                <a href="./jsbase.html" title="Liens vers les bases js">JS bases</a>
+            </li>
+            <li>
+                <a href="./jsajax.html" title="Liens vers js ajax">JS AJAX</a>
+            </li>
+            <li>
+                <a href="./jquerybase.html" title="Liens vers les bases jquery">JQuery bases</a>
+            </li>
+            <li>
+                <a href="./jquerycss.html" title="Liens vers les jquery et css">JQuery CSS</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <h2>JS AJAX</h2>
+        <section>
+            <article>
+                <h2>Ajax avec Javascript</h2>
+                <p>
+                    Pour utiliser ajax avec js, sans regarder du côté des fonctions 
+                    type fetch, il faut instancier une objet de type XmlHttpRequest (XHR). 
+                    En code ça donnait
+                </p>
+                <textarea disabled>var xhr = null;
+// vérification du navigateur : supporte-t'il ajax
+if(window.XMLHttpRequest || window.ActiveXObject){
+    //le navigateur supporte ajax
+    if(window.ActiveXObject){
+        //navigateur microsoft type ie
+        try{
+            xhr = new ActiveXobject("Msxml2.XMLHTTP");
+        }catch(e){
+            xhr = new ActiveXobject("Microsoft.XMLHTTP");
+        }
+    }else{
+        //pas IE
+        xhr = new XmlHttpRequest();
+    }
+}else{
+    //pas d'ajax
+    alert("votre navigateur ne supporte pas l'objet XMLHttpRequest");
+    return;
+}</textarea>
+                <p>
+                    Cette fonction est étudiée pour prendre en compte les divers navigateurs et 
+                    leurs compatibilité avec XHR
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h2>
+                        AJAX - Fetch
+                    </h2>
+                </header>
+                <main>
+                    <h3>xhr : Xml Http Request</h3>
+                    <p>
+                        fetch est la façon récente (2015) d'aller rechercher des flux de données sur une ressource exterieur.
+                    </p>
+                    <p>
+                        <code>
+                            fetch( 'adresse internet de la ressource' )<br />
+                            .then( function(reponse){ /* .then récupère le flux de données renvoyé par fetch */<br />
+                                return reponse.json() <br />
+                            })<br />
+                            .then( function(data){ / ici, .then récupère dans la variable data le return du .then précédent<br />
+                                 //code du traitement des données  <br />
+                                })<br />
+                            .catch( function(error){ // si lefetch ou les then précédents osont en erreur, on la récupère ici dans la variable error<br />
+                                 //code du traitement de l'erreur <br />
+                                })<br />
+                            .finally( function(){// que le fetch ai réussi ou non, le code de .finally sera éxécuté <br />
+                                 // code a exécuter après la tentative réussie ou non de fetch <br />
+                                });
+
+                        </code>
+                    </p>
+                </main>
+            </article>
+        </section>
+        <section>
+                <article>
+                    <p>
+                        <button class="read" data-url="../ressources/users.json">
+                            Users.json
+                        </button>
+                        <button class="read" data-url="../ressources/bdd.json">
+                            bdd.json
+                        </button>
+                    </p>
+                    <table id="result">
+                        <thead>
+                            
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </main>
+            </article>
+            <article>
+                <header>
+                    <h2>Suggestion utilisateurs</h2>
+                </header>
+                <main>
+                    <h3>Utilisateur dans users</h3>
+                    <p>
+                        <input type="text" id="searchUser" value="" />
+                    </p>
+                </main>
+            </article>
+        </section>
+        </section>
+    </main>
+    <footer>
+        <aside>
+            &copy;Dawan Juin 2022
+        </aside>
+    </footer>
+</body>
+</html>
